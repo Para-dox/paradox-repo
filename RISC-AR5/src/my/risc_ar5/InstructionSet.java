@@ -58,7 +58,7 @@ public class InstructionSet {
         int[] stat = statusRegister.getArray(0);
         int[] s = new int[8];
         int car = stat[1];
-        for (int i = 7; i >= 0; i--) {
+        for (int i=0 ; i < 8;i++) {
             if (car + acc[i] + regi[i] == 0) {
                 car = 0;
                 s[i] = 0;
