@@ -137,7 +137,7 @@ public class InstructionSet {
 			
 	}
 
-	//use method addc to sum res + n1 + n2 + n3
+	///use method addc to sum res + n1 + n2 + n3
 
 	
 		
