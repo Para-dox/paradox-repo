@@ -140,33 +140,7 @@ public class InstructionSet {
 	//use method addc to sum res + n1 + n2 + n3
 
 	
-	/* uses the result of the multiplication  
-	int t = 0;
-	for(int i1=0; i1<s.length-1;i1++){
-		t= t + s[i1]; 		
-	}
-	if(t == 0)
-		statusRegister[0]=1;
-	else
-		statusRegister[0]=0;
-	
-	
-	if(s[s.length-1] == 1)
-		statusRegister[2]=1;
-	else
-		statusRegister[2]=0;
-	
-	if(s[s.length-1]== 1 && accumulator[accumulator.length-1] ==0 && reg[reg.length-1] ==0){
 		
-		statusRegister[3]=1;
-		
-	}
-
-	if(s[s.length-1]== 0 &&accumulator[accumulator.length-1] ==1 && reg[reg.length-1] ==1){
-		
-		statusRegister[3]=1;
-		
-	}*/	
 	
 }
 
