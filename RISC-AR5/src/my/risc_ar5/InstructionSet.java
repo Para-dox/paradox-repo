@@ -137,9 +137,8 @@ public class InstructionSet {
 			
 	}
 
-	//use method addc to sum res + n1
-	//use method addc to sum n2 + n3
-	//use method addc to sum the results of the previous two adds
+	//use method addc to sum res + n1 + n2 + n3
+
 	
 	/* uses the result of the multiplication  
 	int t = 0;
