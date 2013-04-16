@@ -101,7 +101,7 @@ public class InstructionSet {
         reg.setArray(regi, registerNum);
         ADDC(accumulator, reg, registerNum, statusRegister);
     }
-    public void multiply(int[] accumulator, int[] reg,int[] statusRegister){
+    public void MUL(int[] accumulator, int[] reg,int[] statusRegister){
 	
 	int[] res = new int[8];	
 	int[] res1 = new int[8];	
