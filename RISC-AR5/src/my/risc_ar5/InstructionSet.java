@@ -58,7 +58,7 @@ public class InstructionSet {
         int[] stat = statusRegister.getArray(0);
         int[] s = new int[8];
         int car = stat[1];
-        for (int i=0 ; i < 8;i++) {
+        for (int i=7; i>=0; i--) {
             if (car + acc[i] + regi[i] == 0) {
                 car = 0;
                 s[i] = 0;
@@ -101,6 +101,76 @@ public class InstructionSet {
         reg.setArray(regi, registerNum);
         ADDC(accumulator, reg, registerNum, statusRegister);
     }
+    public void multiply(int[] accumulator, int[] reg,int[] statusRegister){
+	
+	int[] res = new int[8];	
+	int[] res1 = new int[8];	
+	int[] res2 = new int[8];	
+	int[] res3 = new int[8];	
+	int[] n1 = new int[8];	
+	int[] n2 = new int[8];	
+	int[] n3 = new int[8];	
+	
+	//multiplication of 4 least significant bits
+	for(int i =0; i < 4;i++){
+	
+	res[i] =reg[0]&accumulator[i];
+	res1[i] =reg[1]&accumulator[i];
+	res2[i] =reg[2]&accumulator[i];
+	res3[i] =reg[3]&accumulator[i];
+		
+	}
+	
+	//shifts result of second multiplication
+	for(int i=0;i<7; i++){
+		n1[i+1] = res1[i];
+			
+	}
+	//shifts result of third multiplication
+	for(int i=0;i<6; i++){
+		n2[i+2] = res2[i];
+			
+	}
+	//shifts result of four multiplication
+	for(int i=0;i<5; i++){
+		n3[i+3] = res3[i];
+			
+	}
+
+	//use method addc to sum res + n1
+	//use method addc to sum n2 + n3
+	//use method addc to sum the results of the previous two adds
+	
+	/* uses the result of the multiplication  
+	int t = 0;
+	for(int i1=0; i1<s.length-1;i1++){
+		t= t + s[i1]; 		
+	}
+	if(t == 0)
+		statusRegister[0]=1;
+	else
+		statusRegister[0]=0;
+	
+	
+	if(s[s.length-1] == 1)
+		statusRegister[2]=1;
+	else
+		statusRegister[2]=0;
+	
+	if(s[s.length-1]== 1 && accumulator[accumulator.length-1] ==0 && reg[reg.length-1] ==0){
+		
+		statusRegister[3]=1;
+		
+	}
+
+	if(s[s.length-1]== 0 &&accumulator[accumulator.length-1] ==1 && reg[reg.length-1] ==1){
+		
+		statusRegister[3]=1;
+		
+	}*/	
+	
+}
+
 
     /**
      * 2's complement operation
