@@ -138,9 +138,9 @@ public class InstructionSet {
 	}
 
 	///use method addc to sum res + n1 + n2 + n3
-	addc(res, n1, statusRegister);
-	addc(res, n2, statusRegister);
-	addc(res, n3, statusRegister);
+	ADDC(res, n1, statusRegister);
+	ADDC(res, n2, statusRegister);
+	ADDC(res, n3, statusRegister);
 	
 	accumulator = res;
 	
